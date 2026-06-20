@@ -15,8 +15,11 @@ Real-time ETL Flow - Orders_Db -> ETL Jobs -> Data Warehouse -> Power BI Dashboa
                     If it fails - Dashboard show wrong sales , Management takes wrong decision
 Pyodbc in ETL Testing - Used pyodbc to connect Python automation scripts with MySQL. Data was extracted from APIs 
                 using requests, loaded into target tables, and validated using SQL queries. Performed record count validation, null checks, duplicate checks, source-to-target comparison, and business rule validation. The validations were automated using pytest and pyodbc cursor operations
-Aggregate Validation - It verifies summarized data between source and target systems using functions like COUNT, SUM, AVG, 
-                   MIN and MAX. It helps ensure that data has been loaded correctly without comparing every individual row.
+Aggregate Validation - It verifies summarized data between source and target systems using functions like COUNT, 
+    SUM, AVG,MIN and MAX. It helps ensure that data has been loaded correctly without comparing every individual row.
+Store Procedure - A precompiled set of SQL statements stored in the database and executed using CALL Procedure_name();
+Store Function - A DB object that returns Value. It need to be executed using SELECT get_user_count();
+Store Procedure
 ---------------------------------SQL connection Setup------------------
 import pyodbc
 def get_connection():
